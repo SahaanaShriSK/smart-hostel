@@ -1,3 +1,5 @@
+from .database import engine, Base
+from . import models
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from .routers.api import (
@@ -50,6 +52,7 @@ app.include_router(accountant_router, prefix="/api")
 app.include_router(admin_router, prefix="/api")
 app.include_router(common_router, prefix="/api")
 
+Base.metadata.create_all(bind=engine)
 # Check for unified frontend static build in backend/static
 static_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "static"))
 
