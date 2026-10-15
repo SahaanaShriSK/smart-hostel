@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/a3b6e1ae-63de-4bd5-8919-f1da87b593b6/resourceGroups/rg-smarthostel/providers/Microsoft.Web/sites/smarthostel-2026-ns2",
+    "appService.deploySubpath": "."
+}
